@@ -233,10 +233,12 @@ Tools should be:
 - [Illuminating the Virosphere Through Global Metagenomics](https://doi.org/10.1146/annurev-biochem-080320-103701) (2021)
 - [Structure-based protein function prediction using graph neural networks](https://doi.org/10.1038/s41467-021-23303-9) (2021)
 
-### Tutorials & Workshops
+### Tutorials & Online Courses
 
-- [Phage Genomics Workshop](https://github.com/shandley/phage-genomics-workshop) - Comprehensive phage analysis tutorial
-- [CPT Phage Galaxy Training](https://training.galaxyproject.org/training-material/topics/genome-annotation/tutorials/apollo-phage/tutorial.html) - Step-by-step annotation guide
+- [SEA-PHAGES Phage Genomics Guide](https://seaphages.org/) - Comprehensive guide for phage genome annotation using DNA Master and PECAAN `[2025]`
+- [CPT Galaxy Training Resources](https://cpt.tamu.edu/training-material/) - Texas A&M tutorials and videos for phage annotation `[2024]`
+- [Coursera Bioinformatics Specialization](https://www.coursera.org/specializations/bioinformatics) - UC San Diego course series including genomics analysis
+- [Johns Hopkins Genomic Data Science](https://www.coursera.org/specializations/genomic-data-science) - Coursera specialization with computational biology focus
 
 ### Communities & Forums
 
