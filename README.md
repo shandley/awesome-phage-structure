@@ -1,7 +1,7 @@
-# Awesome Phage AI 🦠🤖
+# Awesome Phage Structure 🦠🤖
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![License: CC0](https://img.shields.io/badge/License-CC0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/yourusername/awesome-phage-ai/pulls)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/shandley/awesome-phage-structure/pulls)
 
 > A curated list of AI and deep learning tools for phage functional annotation and structural biology
 
@@ -263,15 +263,15 @@ Special thanks to:
 
 **Last Updated**: December 2024
 
-**Maintainer**: [Your Name](https://github.com/yourusername)
+**Maintainer**: [Scott Handley](https://github.com/shandley)
 
 **Citation**: If you use this resource, please consider citing:
 ```
-@misc{awesome-phage-ai,
-  author = {Your Name},
-  title = {Awesome Phage AI: A curated list of AI tools for phage functional annotation},
+@misc{awesome-phage-structure,
+  author = {Scott Handley},
+  title = {Awesome Phage Structure: A curated list of AI tools for phage structural and functional annotation},
   year = {2024},
   publisher = {GitHub},
-  url = {https://github.com/yourusername/awesome-phage-ai}
+  url = {https://github.com/shandley/awesome-phage-structure}
 }
 ```
