@@ -1,0 +1,277 @@
+# Awesome Phage AI 🦠🤖
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+[![License: CC0](https://img.shields.io/badge/License-CC0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/yourusername/awesome-phage-ai/pulls)
+
+> A curated list of AI and deep learning tools for phage functional annotation and structural biology
+
+## 🎯 Mission
+
+This repository aims to catalog and organize the rapidly growing ecosystem of AI/ML tools that can help illuminate phage "dark matter" - the vast majority of phage genes with unknown function. By leveraging structure prediction, protein language models, and advanced computational methods, these tools are revolutionizing our understanding of phage biology.
+
+## 📚 Contents
+
+- [Protein Structure Prediction](#-protein-structure-prediction)
+- [Functional Annotation Tools](#-functional-annotation-tools)
+- [Protein-Protein Interactions](#-protein-protein-interactions)
+- [Sequence Analysis & Language Models](#-sequence-analysis--language-models)
+- [Structural Databases & Resources](#️-structural-databases--resources)
+- [Computational Platforms & Workflows](#-computational-platforms--workflows)
+- [Benchmarks & Datasets](#-benchmarks--datasets)
+- [Contributing](#-contributing)
+- [Resources & Reviews](#-resources--reviews)
+
+---
+
+## 🧬 Protein Structure Prediction
+
+Tools for predicting 3D structures of phage proteins from sequence alone.
+
+### General Purpose Structure Prediction
+
+- **[AlphaFold3](https://github.com/google-deepmind/alphafold3)** - Latest iteration of AlphaFold with improved accuracy for protein complexes, nucleic acids, and small molecules `[2024]`
+  - Web server: [AlphaFold Server](https://alphafoldserver.com)
+  - Supports protein-DNA/RNA interactions crucial for phage biology
+
+- **[Boltz-1](https://github.com/jwohlwend/boltz)** `[pip]` - First fully open-source model approaching AlphaFold3 accuracy `[2024]`
+  - MIT licensed alternative to AlphaFold
+  - Supports proteins, nucleic acids, small molecules, and modified residues
+  
+- **[ESMFold](https://github.com/facebookresearch/esm)** `[pip, conda]` - Language model-based structure prediction `[2023]`
+  - Fast single-sequence structure prediction
+  - No MSA required, ideal for novel phage proteins
+
+- **[BioEmu](https://github.com/microsoft/bioemu)** `[pip]` - Microsoft's biomolecular emulator for sampling protein structural ensembles `[2024]`
+  - Generates multiple conformations from single sequence
+  - Useful for understanding protein flexibility
+
+- **[RoseTTAFold2](https://github.com/uw-ipd/RoseTTAFold2)** `[conda]` - Enhanced accuracy for protein-nucleic acid complexes `[2023]`
+  - Particularly good for DNA-binding proteins
+
+### Specialized Phage Structure Tools
+
+- **[ColabFold](https://github.com/sokrypton/ColabFold)** `[conda, docker]` - User-friendly AlphaFold2 implementation `[2024]`
+  - Optimized for batch processing of phage proteomes
+  - Google Colab notebooks available
+
+## 🔬 Functional Annotation Tools
+
+AI-powered tools for assigning functions to phage proteins.
+
+### Structure-Based Annotation
+
+- **[phold](https://github.com/gbouras13/phold)** `[pip, conda]` - Phage annotation using protein structural homology `[2024]`
+  - Uses ProstT5 protein language model for 3Di representations
+  - Searches 1.36 million phage protein structures
+  - Integrates PHROGs, CARD, VFDB databases
+
+- **[Foldseek](https://github.com/steineggerlab/foldseek)** `[conda, docker]` - Ultra-fast structural alignment `[2024]`
+  - 3Di alphabet for structure representation
+  - Powers phold's structural searches
+
+### Sequence-Based Functional Prediction
+
+- **[Pharokka](https://github.com/gbouras13/pharokka)** `[pip, conda]` - Fast phage genome annotation `[2024]`
+  - PHROGs and VFDB integration
+  - Combines with phold for enhanced accuracy
+
+- **[PhageAI](https://phage.ai/)** - Web platform for phage genome analysis `[2024]`
+  - Lifestyle prediction
+  - Host range analysis
+
+## 🧪 Protein-Protein Interactions
+
+Tools for predicting phage-host and protein complex interactions.
+
+- **[Boltz-2](https://github.com/jwohlwend/boltz)** `[pip]` - Joint structure and binding affinity prediction `[2024]`
+  - 1000x faster than physics-based FEP methods
+  - Crucial for understanding phage-host interactions
+
+- **[AlphaFold-Multimer](https://github.com/google-deepmind/alphafold)** `[docker]` - Protein complex structure prediction `[2023]`
+  - Predicts quaternary structures
+  - Useful for tail proteins and receptor binding
+
+- **[DiffDock](https://github.com/gcorso/DiffDock)** `[pip]` - Molecular docking using diffusion models `[2024]`
+  - Predicts small molecule binding sites
+  - Applications in phage-antibiotic synergy
+
+## 📊 Sequence Analysis & Language Models
+
+Large language models trained on biological sequences.
+
+### DNA Language Models
+
+- **[Evo2](https://github.com/arcinstitute/evo2)** `[pip, docker]` - DNA foundation model with 1M base pair context `[2024]`
+  - Trained on 8.8 trillion tokens across all domains of life
+  - Zero-shot variant effect prediction
+  - Generate DNA sequences from prompts
+
+- **[DNABERT-2](https://github.com/MAGICS-LAB/DNABERT_2)** `[pip]` - Bidirectional encoder for DNA `[2024]`
+  - Pre-trained on multi-species genomes
+  - Fine-tunable for phage-specific tasks
+
+### Protein Language Models
+
+- **[ESM-2](https://github.com/facebookresearch/esm)** `[pip, conda]` - 15B parameter protein language model `[2023]`
+  - Zero-shot function prediction
+  - Variant effect prediction
+
+- **[ProtTrans](https://github.com/agemagician/ProtTrans)** `[pip]` - Collection of protein transformers `[2023]`
+  - Multiple architectures (BERT, T5, XLNet)
+  - Pre-trained embeddings for downstream tasks
+
+- **[ProstT5](https://github.com/mheinzinger/ProstT5)** `[pip]` - Protein language model for 3Di sequences `[2024]`
+  - Bilingual model (amino acids + 3Di)
+  - Powers phold's structural searches
+
+## 🗄️ Structural Databases & Resources
+
+Curated databases of phage and viral structures.
+
+### Specialized Phage Databases
+
+- **[BFVD](https://bfvd.steineggerlab.workers.dev)** - Bacteriophage Function and Structure Database `[2024]`
+  - Comprehensive structural annotations
+  - Functional domain predictions
+  - Interactive visualization
+
+- **[Viro3D](https://viro3d.cvr.gla.ac.uk)** - Viral capsid and genome organization database `[2024]`
+  - 3D capsid reconstructions
+  - Genome packaging visualizations
+
+- **[PhageScope](https://phagescope.deepomics.org/)** - Phage genome and structure browser `[2024]`
+  - Integrated structural predictions
+  - Taxonomic organization
+
+### General Structural Resources
+
+- **[PDB](https://www.rcsb.org/)** - Protein Data Bank `[Updated daily]`
+  - Experimentally determined structures
+  - Growing collection of phage proteins
+
+- **[AlphaFold Database](https://alphafold.ebi.ac.uk/)** - Pre-computed structure predictions `[2024]`
+  - Covers multiple proteomes
+  - Downloadable structures
+
+- **[ESM Metagenomic Atlas](https://esmatlas.com/)** - 617M protein structure predictions `[2023]`
+  - Includes environmental phage proteins
+  - Searchable by sequence
+
+## 🧮 Computational Platforms & Workflows
+
+Integrated platforms for phage analysis pipelines.
+
+### Analysis Pipelines
+
+- **[PhageCloud](https://phagecloud.com/)** - Cloud-based phage analysis platform `[2024]`
+  - Automated annotation pipelines
+  - Visualization tools
+
+- **[Galaxy-Phage](https://cpt.tamu.edu/galaxy-pub/)** - Galaxy instance for phage genomics `[2024]`
+  - Pre-configured workflows
+  - Educational resources
+
+### Visualization & Analysis
+
+- **[ChimeraX](https://www.cgl.ucsf.edu/chimerax/)** `[conda]` - Molecular visualization with AlphaFold integration `[2024]`
+  - Structure analysis tools
+  - Publication-quality figures
+
+- **[PyMOL](https://pymol.org/)** `[conda, pip]` - Molecular visualization system `[2024]`
+  - Extensive plugin ecosystem
+  - Scripting capabilities
+
+- **[Mol*](https://molstar.org/)** - Web-based molecular viewer `[2024]`
+  - No installation required
+  - Modern, fast rendering
+
+## 📈 Benchmarks & Datasets
+
+Standard datasets and benchmarks for model evaluation.
+
+### Phage-Specific Datasets
+
+- **[PHROGs](https://phrogs.lmge.uca.fr/)** - Prokaryotic Virus Remote Homologous Groups `[2024]`
+  - 38,880 protein families
+  - Functional annotations
+
+- **[INPHARED](https://github.com/RyanCook94/inphared)** - Integrated Phage Host Reference Database `[2024]`
+  - Curated phage-host pairs
+  - Genomic sequences
+
+### Structure Prediction Benchmarks
+
+- **[CASP15](https://predictioncenter.org/casp15/)** - Critical Assessment of Structure Prediction `[2024]`
+  - Includes viral protein targets
+  - Blind prediction challenge
+
+- **[CAMEO](https://www.cameo3d.org/)** - Continuous Automated Model Evaluation `[Updated weekly]`
+  - Rolling benchmark
+  - Multiple assessment categories
+
+## 🤝 Contributing
+
+Contributions are warmly welcomed! Please see our [contribution guidelines](CONTRIBUTING.md) for details on:
+- Adding new tools
+- Updating existing entries
+- Suggesting new categories
+- Reporting issues
+
+### Inclusion Criteria
+
+Tools should be:
+1. Relevant to phage functional annotation or structural biology
+2. Actively maintained (updated within last 2 years)
+3. Publicly available (open source preferred)
+4. Documented with clear usage instructions
+
+## 📖 Resources & Reviews
+
+### Key Reviews & Perspectives
+
+- [The global virome: How much diversity and how many independent origins?](https://doi.org/10.1016/j.virol.2023.05.008) (2023)
+- [Illuminating the Virosphere Through Global Metagenomics](https://doi.org/10.1146/annurev-biochem-080320-103701) (2021)
+- [Structure-based protein function prediction using graph neural networks](https://doi.org/10.1038/s41467-021-23303-9) (2021)
+
+### Tutorials & Workshops
+
+- [Phage Genomics Workshop](https://github.com/shandley/phage-genomics-workshop) - Comprehensive phage analysis tutorial
+- [CPT Phage Galaxy Training](https://training.galaxyproject.org/training-material/topics/genome-annotation/tutorials/apollo-phage/tutorial.html) - Step-by-step annotation guide
+
+### Communities & Forums
+
+- [PhagesDB](https://phagesdb.org/) - Actinobacteriophage database and community
+- [Phage Directory](https://phage.directory/) - Global phage research community
+- [r/phage](https://www.reddit.com/r/phage/) - Reddit community for phage enthusiasts
+
+---
+
+## 📝 License
+
+[![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
+
+This work is licensed under a [Creative Commons Zero v1.0 Universal License](https://creativecommons.org/publicdomain/zero/1.0/).
+
+## 🙏 Acknowledgments
+
+Special thanks to:
+- The developers of all listed tools for advancing phage research
+- The phage research community for continuous feedback
+- Contributors who help keep this list updated
+
+---
+
+**Last Updated**: December 2024
+
+**Maintainer**: [Your Name](https://github.com/yourusername)
+
+**Citation**: If you use this resource, please consider citing:
+```
+@misc{awesome-phage-ai,
+  author = {Your Name},
+  title = {Awesome Phage AI: A curated list of AI tools for phage functional annotation},
+  year = {2024},
+  publisher = {GitHub},
+  url = {https://github.com/yourusername/awesome-phage-ai}
+}
+```
