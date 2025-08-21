@@ -16,6 +16,7 @@ This repository aims to catalog and organize the rapidly growing ecosystem of AI
 - [Protein-Protein Interactions](#-protein-protein-interactions)
 - [Sequence Analysis & Language Models](#-sequence-analysis--language-models)
 - [Structural Databases & Resources](#️-structural-databases--resources)
+- [Downstream Analysis Tools](#-downstream-analysis-tools)
 - [Computational Platforms & Workflows](#-computational-platforms--workflows)
 - [Benchmarks & Datasets](#-benchmarks--datasets)
 - [Contributing](#-contributing)
@@ -156,6 +157,94 @@ Curated databases of phage and viral structures.
 - **[ESM Metagenomic Atlas](https://esmatlas.com/)** - 617M protein structure predictions `[2023]`
   - Includes environmental phage proteins
   - Searchable by sequence
+
+## 🔍 Downstream Analysis Tools
+
+Tools for analyzing and validating predicted structures, identifying functional sites, and understanding structural implications.
+
+### Structure Validation & Quality Assessment
+
+- **[MolProbity](http://molprobity.biochem.duke.edu/)** `[web]` - Comprehensive structure validation service `[2024]`
+  - Validates protein geometry and steric clashes
+  - Particularly useful for AI-predicted structures
+
+- **[SAVES v6.0](https://saves.mbi.ucla.edu/)** `[web]` - Structure validation server suite `[2024]`
+  - Includes VERIFY3D, ERRAT, PROVE, PROCHECK
+  - Generates detailed quality reports
+
+- **[QMEAN](https://swissmodel.expasy.org/qmean/)** `[web, API]` - Quantitative Model Energy ANalysis `[2024]`
+  - Estimates model quality for entire structures
+  - Provides local quality estimates per residue
+
+### Functional Site & Domain Prediction
+
+- **[CASTp](http://sts.bioe.uic.edu/castp/)** `[web]` - Computed Atlas of Surface Topography of proteins `[2024]`
+  - Identifies and measures protein pockets and cavities
+  - Essential for understanding phage-host binding sites
+
+- **[InterProScan](https://www.ebi.ac.uk/interpro/search/sequence/)** `[web, API, docker]` - Functional domain identification `[2024]`
+  - Scans against multiple domain databases
+  - Includes Pfam, SMART, CDD, SUPERFAMILY
+
+- **[DALI](http://ekhidna2.biocenter.helsinki.fi/dali/)** `[web]` - Structure-based domain identification `[2024]`
+  - Compares structures against PDB database
+  - Identifies remote homologs missed by sequence methods
+
+- **[ConSurf](https://consurf.tau.ac.il/)** `[web]` - Evolutionary conservation analysis `[2024]`
+  - Maps conservation scores onto 3D structures
+  - Identifies functionally important regions
+
+### Binding Site & Interaction Prediction
+
+- **[P2Rank](https://github.com/rdk/p2rank)** `[source, docker]` - Machine learning-based pocket prediction `[2024]`
+  - Ligand binding site prediction
+  - Works well with AlphaFold structures
+
+- **[ProBiS](http://probis.cmm.ki.si/)** `[web]` - Protein Binding Sites detection `[2024]`
+  - Detects structurally similar binding sites
+  - Database of 400,000+ protein structures
+
+- **[PLIP](https://plip-tool.biotec.tu-dresden.de/)** `[web, source]` - Protein-Ligand Interaction Profiler `[2024]`
+  - Analyzes and visualizes protein-ligand interactions
+  - Useful for phage-antibiotic synergy studies
+
+### Electrostatics & Surface Analysis
+
+- **[APBS](https://www.poissonboltzmann.org/)** `[source, web]` - Adaptive Poisson-Boltzmann Solver `[2024]`
+  - Calculates electrostatic properties
+  - Critical for understanding phage tail-receptor interactions
+
+- **[PDB2PQR](https://pdb2pqr.poissonboltzmann.org/)** `[web, source]` - Prepares structures for electrostatics calculations `[2024]`
+  - Assigns charges and radii
+  - Optimizes hydrogen bonding networks
+
+### Structural Alignment & Comparison
+
+- **[TM-align](https://zhanggroup.org/TM-align/)** `[web, source]` - Structure alignment independent of sequence `[2024]`
+  - Robust for comparing distantly related proteins
+  - Provides TM-score for quality assessment
+
+- **[FATCAT](https://fatcat.godziklab.org/)** `[web, source]` - Flexible structure alignment `[2024]`
+  - Detects conformational changes
+  - Useful for comparing different phage protein states
+
+- **[PDBeFold](https://www.ebi.ac.uk/msd-srv/ssm/)** `[web]` - Secondary Structure Matching service `[2024]`
+  - Fast 3D structure comparison
+  - Interactive superposition viewer
+
+### Mutation Effect Prediction
+
+- **[DynaMut2](http://biosig.unimelb.edu.au/dynamut2/)** `[web]` - Predicts mutation effects on stability and dynamics `[2024]`
+  - Analyzes impact on protein stability
+  - Includes dynamics and conformational changes
+
+- **[FoldX](http://foldxsuite.crg.eu/)** `[source]` - Protein design and mutational effects `[2024]`
+  - Quantitative estimation of interaction energies
+  - Useful for engineering phage proteins
+
+- **[SAAFEC-SEQ](https://compbio.cs.toronto.edu/saafec-seq/)** `[web]` - Sequence-based mutation effect prediction `[2024]`
+  - Predicts functional effects of mutations
+  - No structure required
 
 ## 🧮 Computational Platforms & Workflows
 
